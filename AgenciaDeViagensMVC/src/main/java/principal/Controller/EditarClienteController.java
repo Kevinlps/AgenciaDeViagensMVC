@@ -27,8 +27,8 @@ public class EditarClienteController extends HttpServlet {
             RequestDispatcher rd = req.getRequestDispatcher("/alterarCliente.jsp");
             rd.forward(req, resp);
         } catch (NumberFormatException e) {
-            // Handle the case where the "id" parameter is not a valid integer
-            resp.sendRedirect("home"); // Redirect to the home page or handle the error as needed
+            
+            resp.sendRedirect("/alterarCliente.jsp"); 
         }
     }
 
@@ -47,8 +47,8 @@ public class EditarClienteController extends HttpServlet {
             clienteDAO.atualizarCliente(clienteAlterado);
             resp.sendRedirect("index.html");
         } catch (NumberFormatException e) {
-            // Handle the case where form data is not valid
-            resp.sendRedirect("listagemClientes.jsp"); // Redirect to the home page or handle the error as needed
+            
+            resp.sendRedirect("listagemClientes.jsp"); 
         }
     }
 }
