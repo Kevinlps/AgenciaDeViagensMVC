@@ -15,7 +15,7 @@ public class ClienteDAO2 {
 
     public ClienteDAO2() {
         try {
-            conexao = Conexao.createConnectionToMySQL(); // Usando o método da classe Conexao
+            conexao = Conexao.createConnectionToMySQL(); 
         } catch (Exception e) {
             e.printStackTrace();
         }
